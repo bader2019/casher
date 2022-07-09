@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ادارة المنتجات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="CRUD">
+
+     
+    <div class="head">
+        <H2>CASHER</H2>
+        <p>PRODUCT MANAGEMENT SYSTEM</p>
+    </div>
+
+    <div class="inputs">
+        <input placeholder="ادخل المنتج" type="text" id="title">
+        <div class="price">
+            <input onkeyup="getTotla()" placeholder="ادخل سعر المنتج" type="number" id="price">
+            <input onkeyup="getTotla()" placeholder="ادخل الضريبة" type="number" id="taxas">
+            <input onkeyup="getTotla()" placeholder="ادخل قيمة الخصم" type="number" id="discount">
+            <small onkeyup="getTotla()" id="total"></small>
+        </div>
+        <input placeholder="الكمية" type="number" id="count">
+        <input placeholder="الفئة" type="text" id="Category">
+        <button id="submit">اضافة</button>
+    </div>
+
+    <div class="outputs">
+        <div class="searchBlock">
+            <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="بحث عن منتج">
+            <div class="btnSearch">
+                <button onclick="getsearchMood(this.id)" id="searchTitle">بحث بالأسم</button>
+                <button onclick="getsearchMood(this.id)" id="searchCategory">بحث بالفئة</button>
+            </div>
+        </div>
+        <div id="deleteAll"></div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>المنتج</th>
+                <th>السعر</th>
+                <th>الضريبة</th>
+                <th>الخصم</th>
+                <th>المجموع</th>
+                <th>الفئة</th>
+                <th>تحديث</th>
+                <th>حذف </th>
+            </tr>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
